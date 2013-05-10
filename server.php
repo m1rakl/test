@@ -6,7 +6,7 @@ class ServerClass
         'asd' => 123
     );
 
-    function getQuote($parameters)
+    function getTest($parameters)
     {
         if (isset($this->quotes[$parameters->request]))
         {
@@ -14,7 +14,7 @@ class ServerClass
         }
         else
         {
-            throw new SoapFault('ServerCode', 'Not found ' . $symbol);
+            throw new SoapFault('ServerCode', 'Something wrong');
         }
     }
 
